@@ -1,0 +1,397 @@
+/* BudgetAnomaliesPage.module.css */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+:root {
+    --primary-dark-blue: #2c3e50; /* Dark blue base */
+    --secondary-blue: #34495e;
+    --vibrant-blue-light: #6dd5ed; /* Light end of vibrant blue gradient */
+    --vibrant-blue-dark: #3498db; /* Dark start of vibrant blue gradient */
+    --light-text: #ffffff;
+    --accent-green: #2ecc71;
+    --light-gray: #ecf0f1;
+    --border-color: #bdc3c7;
+    --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+    --border-radius: 10px;
+    --warning-yellow: #f39c12;
+    --exceeded-red: #e74c3c;
+    --border-radius-small: 5px; /* Define a smaller border radius */
+}
+
+.container {
+    font-family: sans-serif;
+    padding: 30px;
+    background-color: var(--primary-dark-blue); /* Dark blue background */
+    color: var(--light-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: var(--light-text);
+    margin-bottom: 30px;
+    width: 95%;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.loading, .error {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: 95%;
+    max-width: 800px;
+    background-color: var(--secondary-blue); /* Darker blue for loading/error */
+    box-shadow: var(--box-shadow);
+}
+
+.loading {
+    color: var(--vibrant-blue-light);
+}
+
+.error {
+    color: var(--exceeded-red);
+}
+
+.summary {
+    background-color: var(--secondary-blue); /* Darker blue for summary */
+    color: var(--light-text);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    width: 95%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.summary p {
+    margin: 10px 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.summary strong {
+    font-weight: bold;
+    color: var(--vibrant-blue-light);
+}
+
+.table {
+    width: 95%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: var(--secondary-blue); /* Darker blue for table */
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.thead {
+    background-color: var(--vibrant-blue-dark); /* Vibrant blue for header */
+    color: var(--light-text);
+}
+
+.th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.th:hover {
+    background-color: #2c80b9; /* Slightly darker vibrant blue on hover */
+}
+
+.tbody .tr {
+    border-bottom: 1px solid #555;
+}
+
+.tbody .tr:last-child {
+    border-bottom: none;
+}
+
+.tbody .tr:nth-child(even) {
+    background-color: #444; /* Slightly lighter dark blue for even rows */
+}
+
+.tbody .tr:hover {
+    background-color: #555;
+}
+
+.td {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.icon {
+    margin-right: 8px;
+    color: var(--vibrant-blue-light);
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.actionButton {
+    background-color: var(--accent-green);
+    color: var(--light-text);
+    border: none;
+    padding: 10px 15px;
+    margin-right: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    display: inline-flex; /* For aligning icon and text */
+    align-items: center;
+    gap: 5px;
+}
+
+.actionButton:hover {
+    background-color: #1e7e34;
+}
+
+.exceededBudget {
+    background-color: rgba(var(--exceeded-red), 0.3); /* Light red for exceeded rows */
+}
+
+.nearThreshold {
+    background-color: rgba(var(--warning-yellow), 0.3); /* Light yellow for near threshold rows */
+}
+
+.statusIcon {
+    margin-right: 5px;
+}
+
+.exceeded {
+    color: var(--exceeded-red);
+}
+
+.warning {
+    color: var(--warning-yellow);
+}
+
+.progressBar {
+    background-color: #555;
+    border-radius: 4px;
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 4px;
+    width: 0%;
+    background-color: var(--vibrant-blue-light);
+}
+
+.spendingRatio {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--light-gray);
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.expandedRow {
+    background-color: #555; /* Darker background for expanded row */
+}
+
+.expandedRow td {
+    padding: 20px;
+    border-bottom: 1px solid #777;
+}
+
+.budgetDetails, .transactionsDetails {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+    background-color: #444; /* Darker background for details */
+}
+
+.budgetDetails h3, .transactionsDetails h3 {
+    color: var(--vibrant-blue-light);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.budgetDetails p, .transactionsDetails p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.transactionsDetails ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transactionsDetails li {
+    padding: 10px 0;
+    border-bottom: 1px solid #666;
+}
+
+.transactionsDetails li:last-child {
+    border-bottom: none;
+}
+
+.closeButton {
+    background-color: #777;
+    color: var(--light-text);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+    background-color: #555;
+}
+
+.noAnomalies {
+    margin-top: 30px;
+    color: var(--light-gray);
+    font-style: italic;
+    width: 95%;
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Mobile card layout for tables */
+.mobileCardContainer {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 15px;
+    width: 95%;
+    max-width: 600px; /* Adjust max width for cards */
+    margin: 0 auto 20px; /* Center and add bottom margin */
+}
+
+.mobileCard {
+    background-color: var(--secondary-blue);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    color: var(--light-text);
+}
+
+.mobileCard h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--vibrant-blue-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mobileCard p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.mobileCard .actions {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.mobileCard .actionButton {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    margin-right: 0; /* Reset desktop margin */
+    margin-bottom: 5px; /* Add some bottom margin for wrapping */
+}
+
+.mobileCard .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.mobileCard .progressBar {
+    margin-top: 8px;
+}
+
+.mobileCard .spendingRatio {
+    margin-top: 4px;
+    font-size: 0.8rem;
+}
+
+/* Hide cards and show table on desktop */
+@media (min-width: 769px) {
+    .mobileCardContainer {
+        display: none !important;
+    }
+}
+
+/* Show cards and hide table on mobile */
+@media (max-width: 768px) {
+    .table {
+        display: none !important;
+    }
+
+    .mobileCardContainer {
+        display: flex !important;
+    }
+
+    .container {
+        padding: 15px; /* Adjust container padding for mobile */
+    }
+
+    .title {
+        font-size: 1.5rem; /* Adjust title size for mobile */
+        margin-bottom: 15px;
+    }
+
+    .summary {
+        padding: 10px; /* Adjust summary padding for mobile */
+        margin-bottom: 15px;
+    }
+
+    .summary p {
+        font-size: 0.85rem; /* Adjust summary text size for mobile */
+    }
+
+    .actionButton {
+        font-size: 0.8rem; /* Adjust action button text size for mobile */
+        padding: 8px 10px;
+        margin-right: 5px; /* Keep some right margin if not wrapping too much */
+    }
+
+    .budgetDetails h3, .transactionsDetails h3 {
+        font-size: 1.1rem; /* Adjust detail title size for mobile */
+        margin-bottom: 10px;
+    }
+
+    .budgetDetails p, .transactionsDetails p {
+        font-size: 0.9rem; /* Adjust detail text size for mobile */
+    }
+
+    .closeButton {
+        font-size: 0.8rem; /* Adjust close button text size for mobile */
+        padding: 8px 12px;
+        margin-top: 10px;
+    }
+
+    .noAnomalies {
+        font-size: 0.95rem; /* Adjust no anomalies text size for mobile */
+        margin-top: 15px;
+    }
+}

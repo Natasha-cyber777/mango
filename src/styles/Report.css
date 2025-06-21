@@ -1,0 +1,185 @@
+/* Report.css */
+
+.report-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px; /* Increased padding for desktop */
+  background-color: var(--primary-dark-blue); /* Match dashboard background */
+  color: var(--light-text); /* Match dashboard text color */
+}
+
+.report-title {
+  color: var(--vibrant-blue-light); /* Use a vibrant blue */
+  text-align: center;
+  margin-bottom: 25px; /* Increased margin for desktop */
+  font-size: 2em; /* Larger font size for desktop */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.summary-section,
+.category-section,
+.transactions-section {
+  background-color: var(--secondary-blue); /* Match card background */
+  padding: 25px; /* Increased padding for desktop */
+  margin-bottom: 25px; /* Increased margin for desktop */
+  border-radius: var(--border-radius); /* Use dashboard border radius */
+  box-shadow: var(--box-shadow); /* Use dashboard box shadow */
+}
+
+.section-title {
+  color: var(--light-gray); /* Use light gray for section titles */
+  margin-bottom: 15px; /* Increased margin for desktop */
+  font-size: 1.5em; /* Larger font size for desktop */
+  border-bottom: 2px solid var(--vibrant-blue-dark); /* Add a vibrant blue underline */
+  padding-bottom: 8px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between; /* Align items horizontally on desktop */
+  padding: 10px 0;
+  border-bottom: 1px solid #7f8c8d;
+  align-items: center; /* Vertically align items */
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-label {
+  font-weight: bold;
+}
+
+.balance {
+  color: var(--vibrant-blue-light);
+  font-size: 1.1em;
+}
+
+.income {
+  color: var(--accent-green);
+  font-size: 1.1em;
+}
+
+.expense {
+  color: #e74c3c;
+  font-size: 1.1em;
+}
+
+.savings {
+  color: var(--vibrant-blue-light); /* Use vibrant blue for savings as well */
+  font-size: 1.1em;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #7f8c8d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-name {
+  font-weight: bold;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1em; /* Larger font size for desktop */
+}
+
+.transactions-table th,
+.transactions-table td {
+  border: 1px solid #7f8c8d;
+  padding: 10px; /* Increased padding for desktop */
+  text-align: left;
+}
+
+.transactions-table th {
+  background-color: var(--primary-dark-blue);
+  color: var(--light-text);
+  font-weight: bold;
+}
+
+.transactions-table tbody tr:nth-child(even) {
+  background-color: #444; /* Slightly lighter than secondary blue for contrast */
+}
+
+/* Mobile adjustments (as provided) */
+@media (max-width: 600px) {
+  .report-container {
+      padding: 10px;
+  }
+
+  .report-title {
+      margin-bottom: 15px;
+      font-size: 1.5em;
+  }
+
+  .summary-section,
+  .category-section,
+  .transactions-section {
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .section-title {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #7f8c8d;
+  }
+
+  .summary-item {
+      flex-direction: column;
+      padding: 8px 0;
+      border-bottom: 1px solid #7f8c8d;
+  }
+
+  .transactions-table thead {
+      display: none;
+  }
+
+  .transactions-table tbody tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      border: 1px solid #7f8c8d;
+      border-radius: 8px;
+      overflow: hidden;
+  }
+
+  .transactions-table td {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      border-bottom: 1px solid #7f8c8d;
+      padding: 10px;
+      text-align: left;
+      font-size: 0.9em;
+  }
+
+  .transactions-table td:last-child {
+      border-bottom: none;
+  }
+
+  .transactions-table td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #95a5a6;
+      padding-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+}

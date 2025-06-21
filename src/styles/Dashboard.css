@@ -1,0 +1,612 @@
+/* Dashboard.css */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+:root {
+    --primary-dark-blue: #2c3e50; /* Dark blue base */
+    --secondary-blue: #34495e;
+    --vibrant-blue-light: #6dd5ed; /* Light end of vibrant blue gradient */
+    --vibrant-blue-dark: #3498db; /* Dark start of vibrant blue gradient */
+    --light-text: #ffffff;
+    --accent-green: #2ecc71;
+    --light-gray: #ecf0f1;
+    --border-color: #bdc3c7;
+    --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+    --border-radius: 10px;
+}
+
+.dashboard-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: 30px;
+    background-color: var(--primary-dark-blue); /* Dark blue background for the main container */
+    color: var(--light-text);
+    font-family: sans-serif;
+}
+
+.dashboard-main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: auto auto 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.top-summary {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    background-color: var(--secondary-blue); /* Darker blue for summary cards */
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    flex: 1;
+    text-align: center;
+    border-left: 5px solid var(--vibrant-blue-dark); /* Vibrant blue accent border */
+}
+
+.summary-card p {
+    color: var(--light-gray);
+    margin-bottom: 8px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.summary-card h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.summary-card h2.income {
+    color: var(--accent-green);
+}
+
+.summary-card h2.savings {
+    color: var(--vibrant-blue-light); /* Lighter vibrant blue for savings */
+}
+
+.summary-card h2.expense {
+    color: #e74c3c;
+}
+
+.main-content-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    grid-column: 1 / -1;
+}
+
+.transaction-chart-section.card,
+.financial-profile-section.card,
+.overview-section.card,
+.transactions-section.card {
+    background-color: var(--secondary-blue); /* Darker blue for content cards */
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-top: 3px solid var(--vibrant-blue-dark); /* Vibrant blue accent border */
+}
+
+.add-transaction-section h3,
+.transaction-chart-section h3,
+.financial-profile-section h3,
+.overview-section h3,
+.transactions-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+}
+
+/* Dashboard.css */
+
+/* ... other existing CSS ... */
+
+.add-transaction-section.card {
+    background-color: var(--secondary-blue);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-top: 3px solid var(--vibrant-blue-dark);
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between elements */
+}
+
+.add-transaction-section h3 {
+    margin-top: 0;
+    margin-bottom: 0; /* Reduced bottom margin for heading */
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+}
+
+.add-transaction-section .form-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Wider min width for inputs */
+    gap: 15px;
+}
+
+.add-transaction-section .form-card > div { /* Group labels and inputs */
+    display: flex;
+    flex-direction: column;
+}
+
+.add-transaction-section .form-card label {
+    color: var(--light-gray);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.add-transaction-section .form-card input,
+.add-transaction-section .form-card select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    background-color: #444;
+    color: var(--light-text);
+}
+
+.add-transaction-section .form-card button {
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: var(--accent-green);
+    color: var(--light-text);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-transaction-section .form-card button:hover {
+    background-color: #1e7e34;
+}
+
+/* Mobile adjustments for Add New Transaction */
+@media (max-width: 600px) {
+    .add-transaction-section.card {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .add-transaction-section .form-card {
+        grid-template-columns: 1fr; /* Stack inputs on mobile */
+        gap: 10px;
+    }
+
+    .add-transaction-section .form-card label {
+        font-size: 0.85rem;
+    }
+
+    .add-transaction-section .form-card input,
+    .add-transaction-section .form-card select,
+    .add-transaction-section .form-card button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+.transactions-section .controls input[type="text"],
+.transactions-section .controls select,
+.transactions-section .controls button {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.transaction-item {
+    padding: 12px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #555;
+}
+
+/* Hero Card - Vibrant Blue Gradient */
+.hero-card.card {
+    background: linear-gradient(135deg, var(--vibrant-blue-dark), var(--vibrant-blue-light));
+    color: var(--light-text);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    grid-column: 1 / -1;
+    border: none;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-icon {
+    font-size: 5em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.hero-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    background-color: #ffffff;
+    color: var(--vibrant-blue-dark);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button:hover {
+    background-color: var(--vibrant-blue-dark);
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dashboard.css */
+
+/* ... other existing CSS ... */
+
+.dashboard-features {
+    background-color: var(--secondary-blue);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    grid-column: 1 / -1;
+    margin-bottom: 20px; /* Reduced margin for the standard features card */
+    border-bottom: 3px solid var(--vibrant-blue-light);
+  }
+  
+  .dashboard-features h2 {
+    color: var(--light-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .dashboard-features .feature-list {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    justify-items: center; /* Center items within each grid cell */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Default for auto-fitting (responsive) */
+  }
+  
+  /* Desktop view for standard features */
+  @media (min-width: 768px) {
+    .dashboard-features .feature-list {
+      grid-template-columns: repeat(3, 1fr); /* Organize standard features in 3 columns */
+    }
+  }
+  
+  .dashboard-features .feature-item {
+    padding: 20px; /* Increased padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added transform and box-shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center icon and text */
+    gap: 10px; /* Space between icon and text */
+    border: 1px solid transparent; /* Add transparent border for hover effect */
+  }
+  
+  .dashboard-features .feature-item:not(.ai-powered-feature):hover { /* Apply hover to non-AI features */
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--vibrant-blue-light); /* Highlight on hover */
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+  }
+  
+  .dashboard-features .feature-item svg {
+    font-size: 2.5rem; /* Slightly larger icons */
+    color: var(--vibrant-blue-light);
+  }
+  
+  .dashboard-features .feature-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--light-text); /* Ensure text is visible on the background */
+  }
+  
+  /* Styling for the separate AI Features Card */
+  .ai-features-card {
+    background-color: var(--secondary-blue);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    grid-column: 1 / -1;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--vibrant-blue-light); /* Consistent border */
+  }
+  
+  .ai-features-card h2 {
+    color: var(--vibrant-blue-light); /* Distinct heading color */
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.7rem; /* Slightly larger heading */
+  }
+  
+  .ai-features-card .ai-feature-list {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Wider min width for AI items */
+  }
+  
+  @media (min-width: 768px) {
+    .ai-features-card .ai-feature-list {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on desktop for AI */
+    }
+  }
+  
+  .ai-features-card .ai-feature-item {
+    padding: 25px; /* Slightly more padding */
+    border-radius: 8px; /* More rounded */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: rgba(var(--vibrant-blue-rgb), 0.1); /* Subtle background highlight */
+    border: 1px solid var(--vibrant-blue-light);
+    box-shadow: 0 4px 8px rgba(var(--vibrant-blue-rgb), 0.2);
+    display: flex;
+    flex-direction: row; /* Horizontal layout for icon and text */
+    align-items: center;
+    gap: 30px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .ai-features-card .ai-feature-item:hover {
+    background-color: rgba(var(--vibrant-blue-rgb), 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(var(--vibrant-blue-rgb), 0.3);
+  }
+  
+  .ai-features-card .ai-feature-item svg {
+    font-size: 3rem; /* Larger icons */
+    color: var(--vibrant-blue-light);
+  }
+  
+  .ai-features-card .ai-feature-item .feature-info {
+    flex-grow: 1; /* Allow text to take up remaining space */
+  }
+  
+  .ai-features-card .ai-feature-item .feature-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--vibrant-blue-light);
+    margin-bottom: 5px;
+  }
+  
+  .ai-features-card .ai-feature-item .feature-description {
+    font-size: 0.95rem;
+    color: var(--light-text-secondary);
+    margin: 0;
+  }
+  
+  /* Mobile adjustments for AI card */
+  @media (max-width: 600px) {
+    .ai-features-card .ai-feature-list {
+      grid-template-columns: 1fr; /* Single column on mobile for AI */
+    }
+  
+    .ai-features-card .ai-feature-item {
+      flex-direction: column; /* Stack icon and text on mobile */
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+    }
+  
+    .ai-features-card .ai-feature-item .feature-info {
+      text-align: center;
+    }
+  }
+  
+  /* Mobile adjustments for Features Section (Standard Features) */
+  @media (max-width: 600px) {
+    .dashboard-features {
+      padding: 20px;
+      margin-bottom: 15px; /* Adjust margin */
+    }
+  
+    .dashboard-features h2 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+  
+    .dashboard-features .feature-list {
+      grid-template-columns: repeat(2, 1fr); /* Force 2 columns on mobile */
+      gap: 15px;
+    }
+  
+    .dashboard-features .feature-item {
+      padding: 15px;
+      gap: 8px;
+    }
+  
+    .dashboard-features .feature-item svg {
+      font-size: 2rem;
+    }
+  
+    .dashboard-features .feature-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Very small screens - fallback to single column if needed */
+  @media (max-width: 400px) {
+    .dashboard-features .feature-list,
+    .ai-features-card .ai-feature-list {
+      grid-template-columns: 1fr; /* Fallback to single column */
+    }
+  }
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+    .dashboard-grid-container {
+        padding: 15px;
+    }
+
+    .top-summary {
+        gap: 15px;
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 15px;
+    }
+
+    .summary-card p {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .summary-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-main-content {
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .main-content-row {
+        gap: 15px;
+    }
+
+    .add-transaction-section h3,
+    .transaction-chart-section h3,
+    .financial-profile-section h3,
+    .overview-section h3,
+    .transactions-section h3,
+    .dashboard-features h2 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-card.card {
+        padding: 30px;
+        gap: 10px;
+    }
+
+    .hero-icon {
+        font-size: 4em;
+        margin-bottom: 10px;
+    }
+
+    .hero-title {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+
+    .hero-button {
+        font-size: 1.1em;
+        padding: 14px 28px;
+    }
+
+    .add-transaction-section .form-card input,
+    .add-transaction-section .form-card select,
+    .add-transaction-section .form-card button,
+    .transactions-section .controls input[type="text"],
+    .transactions-section .controls select,
+    .transactions-section .controls button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .transaction-item {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+}
+/* Floating Button */
+.qr-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00f2ff;
+  color: #000;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  font-weight: bold;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.qr-btn:hover {
+  background-color: #00bfff;
+}
+
+/* Modal Styling */
+.qr-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.qr-modal-content {
+  background: #121212;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+

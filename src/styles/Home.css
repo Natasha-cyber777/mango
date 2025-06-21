@@ -1,0 +1,327 @@
+/* Base container */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1c2833, #2c3e50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: #2c3e50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-logo {
+  width: 70px;
+  margin-bottom: 1.5rem;
+}
+
+/* Typography */
+.home-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #90ee90;
+  margin-bottom: 1rem;
+}
+
+.home-title span {
+  color: #00ffb3;
+}
+
+.hero-section .hero-subtext { /* Specific targeting */
+  font-size: 1.2rem;
+  color: #d0d7de;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  line-height: 1.7;
+  text-align: center !important; /* Force center alignment */
+}
+
+/* Buttons */
+.home-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.home-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.home-button.primary {
+  background-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3);
+}
+
+.home-button.secondary {
+  background-color: transparent;
+  border: 2px solid #4ade80;
+  color: #4ade80;
+  box-shadow: 0 6px 18px rgba(74, 222, 128, 0.2);
+}
+
+.home-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.home-promise {
+  font-size: 1rem;
+  color: #a0aec0;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.home-promise .security-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Generic Section Styling */
+.section-content {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #90ee90;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #00ffb3;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #d0d7de;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+ul li {
+  font-size: 1.1rem;
+  color: #d0d7de;
+  margin-bottom: 0.5rem;
+}
+
+/* Problem/Solution Section */
+.problem-solution-section {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 3rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.problem-solution-section .section-content {
+  text-align: left;
+}
+
+.problem-solution-section ul {
+  margin-left: 1.5rem;
+}
+
+/* Features Section */
+.features-section {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  text-align: left;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  margin-top: 0;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 3rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.how-it-works-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  text-align: left;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+  margin-top: 0;
+}
+
+/* Force two columns for exactly 4 steps on wider screens */
+@media screen and (min-width: 601px) { /* Adjust breakpoint as needed */
+  .how-it-works-steps {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+/* On smaller screens, let them stack */
+@media screen and (max-width: 600px) {
+  .how-it-works-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Testimonials Section (if uncommented) */
+.testimonials-section {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 3rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial p:last-child {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+/* Trust and Security Section */
+.trust-security-section {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 3rem 1rem;
+}
+
+.trust-security-section .section-content {
+  text-align: left;
+}
+
+.trust-security-section ul {
+  margin-left: 1.5rem;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .hero-section .hero-subtext { /* Specific targeting for mobile */
+    font-size: 1.1rem;
+    text-align: center !important;
+  }
+
+  .hero-logo {
+    width: 60px;
+  }
+
+  .home-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .features-grid,
+  .how-it-works-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .section-content {
+    padding: 1.5rem 1rem;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p,
+  ul li {
+    font-size: 1rem;
+  }
+}
+
+

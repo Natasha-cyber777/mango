@@ -1,7 +1,12 @@
 .App {
   text-align: center;
 }
-
+.app-container {
+  /* ... other styles ... */
+  min-height: 100vh; /* This can sometimes cause issues if content is shorter */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +41,41 @@
     transform: rotate(360deg);
   }
 }
+/* src/App.css (or your global CSS) */
+
+/* ... other existing styles ... */
+
+/* App.css (or Chatbot.css) */
+/* App.css (or Chatbot.css) */
+.chatbot-icon-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-icon {
+  background-color: #76ff03; /* Neon green - high contrast */
+  color: #2c3e50; /* Dark text for readability */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem; /* Slightly larger icon */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* More prominent shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chatbot-icon:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+.chatbot-icon:active {
+  transform: scale(0.95);
+}
+

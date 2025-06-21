@@ -1,0 +1,223 @@
+/* components/BudgetProgress.css */
+
+.budget-progress-container {
+    background-color: #34495e;
+    padding: 15px; /* Reduced padding for smaller screens */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Added some margin around the container */
+}
+
+.budget-info {
+    margin-bottom: 12px; /* Slightly reduced margin */
+}
+
+.budget-category {
+    color: #f5f6fa;
+    margin-top: 0;
+    margin-bottom: 3px; /* Reduced margin */
+    font-size: 1rem; /* Reduced font size */
+    font-weight: bold;
+}
+
+.budget-period {
+    color: #95a5a6;
+    font-size: 0.8rem; /* Reduced font size */
+    font-style: italic;
+    margin-bottom: 6px; /* Reduced margin */
+}
+
+.budget-amount {
+    color: #dcdde1;
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+.budget-amount .spent {
+    color: #e67e22; /* Or another highlighting color */
+    font-weight: bold;
+}
+
+.progress-bar-wrapper {
+    background-color: #485460;
+    border-radius: 6px;
+    height: 10px; /* Reduced height */
+    overflow: hidden;
+    margin-bottom: 12px; /* Slightly reduced margin */
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px; /* Reduced padding */
+    color: #222; /* Text color for percentage */
+    font-size: 0.7rem; /* Reduced font size */
+    font-weight: bold;
+}
+
+.edit-progress-controls {
+    display: flex;
+    gap: 8px; /* Reduced gap */
+    margin-bottom: 12px; /* Slightly reduced margin */
+    align-items: center;
+    flex-direction: column; /* Stack input and buttons on smaller screens */
+    align-items: stretch; /* Make input and buttons take full width */
+}
+
+.edit-progress-controls .edit-input {
+    flex-grow: 1;
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #485460;
+    border-radius: 4px;
+    background-color: #2c3e50;
+    color: #f5f6fa;
+    font-size: 0.9rem; /* Reduced font size */
+    margin-bottom: 5px; /* Add some space between input and buttons */
+}
+
+.edit-buttons {
+    display: flex;
+    gap: 5px;
+    width: 100%; /* Make buttons take full width */
+}
+
+.edit-buttons button {
+    flex-grow: 1; /* Distribute space evenly between buttons */
+    padding: 8px 10px; /* Reduced padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem; /* Reduced font size */
+    transition: background-color 0.3s ease;
+}
+
+.edit-buttons .save-button {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.edit-buttons .save-button:hover {
+    background-color: #27ae60;
+}
+
+.edit-buttons .cancel-button {
+    background-color: #f39c12;
+    color: white;
+}
+
+.edit-buttons .cancel-button:hover {
+    background-color: #e0ac1c;
+}
+
+.update-progress-button-container {
+    text-align: right;
+    margin-bottom: 12px; /* Slightly reduced margin */
+}
+
+.update-progress-button-container button {
+    padding: 8px 12px; /* Reduced padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem; /* Reduced font size */
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.update-progress-button-container button:hover {
+    background-color: #2980b9;
+}
+
+.message {
+    padding: 8px; /* Reduced padding */
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.8rem; /* Reduced font size */
+    margin-top: 8px; /* Reduced margin */
+}
+
+.message.over-budget {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.message.within-budget {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.error-message {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px; /* Reduced padding */
+    border-radius: 4px;
+    margin-bottom: 8px; /* Reduced margin */
+    font-size: 0.7rem; /* Reduced font size */
+    text-align: center;
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 600px) {
+    .budget-progress-container {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .budget-category {
+        font-size: 1rem;
+    }
+
+    .budget-period {
+        font-size: 0.7rem;
+    }
+
+    .budget-amount {
+        font-size: 0.8rem;
+    }
+
+    .progress-bar-wrapper {
+        height: 8px;
+        margin-bottom: 10px;
+    }
+
+    .progress-bar {
+        font-size: 0.6rem;
+        padding-right: 5px;
+    }
+
+    .edit-progress-controls {
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .edit-progress-controls .edit-input {
+        padding: 6px;
+        font-size: 0.8rem;
+        margin-bottom: 3px;
+    }
+
+    .edit-buttons button {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+
+    .update-progress-button-container button {
+        padding: 6px 10px;
+        font-size: 0.7rem;
+    }
+
+    .message {
+        padding: 6px;
+        font-size: 0.7rem;
+        margin-top: 6px;
+    }
+
+    .error-message {
+        padding: 5px;
+        font-size: 0.6rem;
+        margin-bottom: 8px;
+    }
+}

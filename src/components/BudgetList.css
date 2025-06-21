@@ -1,0 +1,135 @@
+/* components/BudgetList.css */
+
+.budget-list {
+    list-style: none;
+    padding: 0;
+}
+
+.budget-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #485460;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.budget-item:hover {
+    background-color: #34495e;
+}
+
+.budget-item:last-child {
+    border-bottom: none;
+}
+
+.budget-category {
+    font-weight: bold;
+    color: #f5f6fa;
+    font-size: 1.1rem;
+    flex-grow: 1; /* Allow category to take more space */
+}
+
+.budget-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.budget-amount {
+    color: #3498db;
+    font-size: 1rem;
+}
+
+.budget-period {
+    color: #95a5a6;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.budget-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.budget-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.budget-actions .edit-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.budget-actions .edit-button:hover {
+    background-color: #2980b9;
+}
+
+.budget-actions .delete-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.budget-actions .delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Edit Form Styles */
+.edit-form {
+    display: flex;
+    gap: 10px;
+    width: 100%; /* Make the edit form take full width */
+    align-items: center;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #485460;
+    border-radius: 4px;
+    background-color: #34495e;
+    color: #f5f6fa;
+    flex-grow: 1;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.edit-actions .save-button {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.edit-actions .save-button:hover {
+    background-color: #27ae60;
+}
+
+.edit-actions .cancel-button {
+    background-color: #f39c12;
+    color: white;
+}
+
+.edit-actions .cancel-button:hover {
+    background-color: #e0ac1c;
+}
+
+.empty-budget-list {
+    padding: 15px;
+    color: #95a5a6;
+    text-align: center;
+}

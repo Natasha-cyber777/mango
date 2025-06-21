@@ -1,0 +1,43 @@
+/* 🌙 New Navbar Styling */
+.home-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color:#2c3e50;/* 🌙 Dark background */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* 🌙 Stronger shadow for depth */
+}
+
+/* 🌟 Logo Styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #76ff03; /* 🌟 Neon green to match theme */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.logo span {
+  margin-left: 5px;
+}
+
+/* 🔥 Hover Effect */
+.logo:hover {
+  color: #b2ff59; /* 🌟 Lighter neon green for hover effect */
+}
+
+/* 🌟 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+}

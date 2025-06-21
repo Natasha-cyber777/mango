@@ -1,0 +1,128 @@
+/* UserProfilePage.css */
+
+.user-profile-page-container {
+    font-family: sans-serif;
+    background-color: #1e272e; /* Dark background from the theme */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make container full width */
+    padding: 20px;
+    color: #f5f6fa; /* Light text color */
+}
+
+h2 {
+    color: #f5f6fa;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.profile-section {
+    background-color: #2c3e50; /* Darker section background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0; /* Remove border radius for full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    width: 100%; /* Make sections full width */
+    max-width: none; /* Override any max-width */
+    margin-left: 0; /* Reset left margin */
+    margin-right: 0; /* Reset right margin */
+}
+
+.profile-section h3 {
+    color: #f5f6fa;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #485460; /* Darker border */
+    padding-bottom: 5px;
+}
+
+.profile-section p {
+    margin-bottom: 10px;
+}
+
+.profile-section strong {
+    color: #2ecc71; /* Highlight important values */
+}
+
+.profile-section ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.profile-section li {
+    margin-bottom: 5px;
+    color: #dcdde1; /* Slightly lighter text for list items */
+}
+
+.profile-section a {
+    color: #3498db; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-section a:hover {
+    color: #2980b9;
+}
+
+.profile-section h4 {
+    color: #f5f6fa;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #485460;
+    padding-bottom: 5px;
+}
+
+.profile-section .chart-placeholder {
+    background-color: #34495e;
+    color: #95a5a6;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.action-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.action-link:hover {
+    color: #2980b9;
+}
+
+.actions-section {
+    text-align: center;
+    padding: 15px 0; /* Add some padding around the buttons */
+}
+
+.action-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #f5f6fa; /* Light text for better initial contrast */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 10px 0 0; /* Adjust spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    font-weight: bold; /* Make the text stand out more */
+}
+
+.action-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    color: #f5f6fa; /* Keep text light on hover */
+}
+
+/* Adjust spacing between buttons */
+.actions-section > a {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.actions-section > a:last-child {
+    margin-right: 0; /* Remove extra right margin on the last button */
+}

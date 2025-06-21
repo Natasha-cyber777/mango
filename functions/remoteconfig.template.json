@@ -1,0 +1,9 @@
+{
+    "parameters": {
+      "welcome_message": {
+        "defaultValue": { "value": "Welcome to our app!" }
+      }
+    },
+    "conditions": []
+  }
+  

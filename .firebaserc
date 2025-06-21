@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "mango-bcf17"
+  },
+  "targets": {},
+  "etags": {
+    "mango-bcf17": {
+      "extensionInstances": {}
+    }
+  }
+}

@@ -1,0 +1,358 @@
+/* SpecialPlannerPage.css */
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+:root {
+    --primary-dark-blue: #2c3e50; /* Dark blue base (for header/overall background if needed) */
+    --secondary-dark-blue: #34495e; /* Slightly lighter dark blue for cards */
+    --vibrant-blue: #3498db; /* Vibrant blue accent */
+    --light-text: #ffffff;
+    --light-gray-text: #ecf0f1;
+    --accent-green: #2ecc71;
+    --accent-red: #e74c3c;
+    --border-color: #555; /* Dark border color */
+    --border-radius: 10px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.special-planner-page-container {
+    font-family: sans-serif;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-dark-blue); /* Dark background */
+    color: var(--light-text); /* Light text */
+}
+
+.special-planner-page-container h2 {
+    color: var(--vibrant-blue); /* Vibrant blue heading */
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+}
+
+.special-planner-page-container .error-message {
+    background-color: rgba(231, 76, 60, 0.2); /* Light red background */
+    color: var(--accent-red); /* Red text */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--accent-red);
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.special-planner-page-container > div:not(.navbar) {
+    background-color: var(--secondary-dark-blue); /* Darker blue for cards */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    max-width: 960px;
+    box-sizing: border-box;
+    border-top: 3px solid var(--vibrant-blue); /* Vibrant blue accent */
+}
+
+.special-planner-page-container h3 {
+    color: var(--light-text);
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--border-color); /* Dark border */
+    padding-bottom: 8px;
+    font-size: 1.5em;
+}
+
+/* Add New Category Section */
+.special-planner-page-container .add-field-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.special-planner-page-container .add-field-section input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    flex-grow: 1;
+    color: var(--light-text);
+    background-color: #555; /* Dark input background */
+    box-sizing: border-box;
+}
+
+.special-planner-page-container .add-field-section button {
+    background-color: var(--accent-green); /* Green button */
+    color: var(--light-text);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.special-planner-page-container .add-field-section button:hover {
+    background-color: #1e7e34;
+}
+
+/* Add New Item and Set Budget Sections */
+.special-planner-page-container .add-item-section > *,
+.special-planner-page-container .set-budget-section > * {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.special-planner-page-container .add-item-section label,
+.special-planner-page-container .set-budget-section label {
+    color: var(--light-gray-text); /* Light gray text for labels */
+    width: 100px;
+    text-align: left;
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+.special-planner-page-container .add-item-section select,
+.special-planner-page-container .add-item-section input[type="number"],
+.special-planner-page-container .add-item-section input[type="date"],
+.special-planner-page-container .set-budget-section select,
+.special-planner-page-container .set-budget-section input[type="number"] {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    color: var(--light-text);
+    background-color: #555; /* Dark input background */
+    font-size: 1rem;
+}
+
+.special-planner-page-container .add-item-section button,
+.special-planner-page-container .set-budget-section button {
+    background-color: var(--vibrant-blue); /* Vibrant blue button */
+    color: var(--light-text);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.special-planner-page-container .add-item-section button:hover,
+.special-planner-page-container .set-budget-section button:hover {
+    background-color: #2980b9;
+}
+
+.special-planner-page-container .current-budgets-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.special-planner-page-container .current-budgets-section li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border-color); /* Dark border */
+    color: var(--light-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.special-planner-page-container .current-budgets-section li:last-child {
+    border-bottom: none;
+}
+
+.special-planner-page-container .summary-filter-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.special-planner-page-container .summary-filter-section label {
+    color: var(--light-gray-text); /* Light gray text for labels */
+    font-size: 1rem;
+}
+
+.special-planner-page-container .summary-filter-section select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--light-text);
+    background-color: #555; /* Dark select background */
+    flex-grow: 1;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.special-planner-page-container .summary-section ul {
+    list-style: none;
+    padding: 0;
+    color: var(--light-text);
+}
+
+.special-planner-page-container .summary-section li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border-color); /* Dark border */
+    display: flex;
+    justify-content: space-between;
+}
+
+.special-planner-page-container .summary-section li:last-child {
+    border-bottom: none;
+}
+
+.special-planner-page-container .budget-vs-expenses-section table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.special-planner-page-container .budget-vs-expenses-section th,
+.special-planner-page-container .budget-vs-expenses-section td {
+    border: 1px solid var(--border-color); /* Dark border */
+    padding: 8px;
+    text-align: left;
+    color: var(--light-text);
+    white-space: nowrap;
+}
+
+.special-planner-page-container .budget-vs-expenses-section th {
+    background-color: #555; /* Darker header background */
+    color: var(--light-text);
+    font-weight: bold;
+}
+
+.special-planner-page-container .budget-vs-expenses-section tr:nth-child(even) {
+    background-color: #3e3e3e; /* Even darker row background */
+}
+
+.special-planner-page-container .budget-vs-expenses-section .over-budget {
+    color: var(--accent-red); /* Red for over budget */
+    font-weight: bold;
+}
+
+.special-planner-page-container .chart-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.special-planner-page-container .recharts-responsive-container {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 300px;
+}
+
+.special-planner-page-container .recharts-legend-item-text {
+    color: var(--light-text) !important;
+    font-size: 0.9em;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+    .special-planner-page-container {
+        padding-top: 15px;
+        width:100%;
+    }
+
+    .special-planner-page-container h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .special-planner-page-container h3 {
+        font-size: 1.3em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .special-planner-page-container > div:not(.navbar) {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    .special-planner-page-container .add-field-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .special-planner-page-container .add-field-section input[type="text"] {
+        padding: 10px;
+        border-radius: 6px;
+        background-color: #444;
+        color: var(--light-text);
+    }
+
+    .special-planner-page-container .add-field-section button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+
+    .special-planner-page-container .add-item-section > *,
+    .special-planner-page-container .set-budget-section > * {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .special-planner-page-container .add-item-section label,
+    .special-planner-page-container .set-budget-section label {
+        width: 100%;
+        text-align: left;
+        font-size: 0.85rem;
+        color: var(--light-gray-text);
+    }
+
+    .special-planner-page-container .add-item-section select,
+    .special-planner-page-container .add-item-section input[type="number"],
+    .special-planner-page-container .add-item-section input[type="date"],
+    .special-planner-page-container .set-budget-section select,
+    .special-planner-page-container .set-budget-section input[type="number"] {
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        background-color: #555;
+        color: var(--light-text);
+    }
+
+    .special-planner-page-container .add-item-section button,
+    .special-planner-page-container .set-budget-section button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+
+    .special-planner-page-container .summary-filter-section {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .special-planner-page-container .summary-filter-section select {
+        width: 100%;
+        background-color: #555;
+        color: var(--light-text);
+    }
+
+    .special-planner-page-container .budget-vs-expenses-section table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+
+    .special-planner-page-container .budget-vs-expenses-section th,
+    .special-planner-page-container .budget-vs-expenses-section td {
+        padding: 8px;
+        border-color: var(--border-color);
+    }
+}

@@ -1,0 +1,61 @@
+/* 🌙 Chart Container */
+.chart-container {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #1e1e1e; /* Dark background */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7); /* Deeper shadow for glass effect */
+    margin-bottom: 20px;
+  }
+  
+  /* 🌟 Chart Title */
+  .chart-title {
+    font-size: 20px;
+    color: #76ff03; /* Neon green for title */
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  /* 🌟 Tooltip */
+  .chart-tooltip {
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 8px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+  }
+  
+  /* 🌟 Legend */
+  .chart-legend {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #bbb !important;
+  }
+  
+  /* 🌟 Bar Colors */
+  .chart-bar-income {
+    background-color: #76ff03 !important; /* Neon green for income */
+    border-color: #388E3C !important;
+  }
+  
+  .chart-bar-expense {
+    background-color: #ff4d4d !important; /* Neon red for expense */
+    border-color: #D32F2F !important;
+  }
+  
+  .chart-bar-savings {
+    background-color: #FFC107 !important; /* Bright yellow for savings */
+    border-color: #FFA000 !important;
+  }
+  
+  /* 🌟 Axis Styling */
+  .chart-axis {
+    font-size: 14px !important;
+    color: #bbb !important;
+  }
+  
+  .chart-grid-line {
+    color: rgba(255, 255, 255, 0.1) !important;
+  }
+  

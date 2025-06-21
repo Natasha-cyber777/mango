@@ -1,0 +1,275 @@
+/* SavingsProfile.css */
+
+.savings-profile-container {
+    font-family: sans-serif;
+    background-color: #1e272e; /* Dark background from the theme */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make container full width */
+    padding: 20px;
+    color: #f5f6fa; /* Light text color */
+}
+
+h2 {
+    color: #f5f6fa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #f5f6fa;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #485460; /* Darker border */
+    padding-bottom: 5px;
+}
+
+.savings-goals-section,
+.add-savings-goal-section,
+.total-savings-section {
+    background-color: #2c3e50; /* Darker section background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0; /* Remove border radius for full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    width: 100%; /* Make sections full width */
+    max-width: none; /* Override any max-width */
+}
+
+.savings-goals-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.savings-goal-item {
+    display: flex;
+    flex-direction: column; /* Stack items for mobile */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start on mobile */
+    padding: 15px 0;
+    border-bottom: 1px solid #485460;
+}
+
+@media (min-width: 768px) {
+    .savings-goal-item {
+        flex-direction: row; /* Revert to row for larger screens */
+        align-items: center; /* Align items vertically in the row */
+        padding: 10px 0; /* Adjust padding for larger screens */
+    }
+}
+
+.savings-goal-item:last-child {
+    border-bottom: none;
+}
+
+.goal-details {
+    display: flex;
+    flex-direction: column; /* Stack details on mobile */
+    align-items: flex-start;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+    .goal-details {
+        flex-direction: row; /* Revert to row for larger screens */
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+.goal-name {
+    flex-grow: 1;
+    font-weight: bold; /* Make goal name bold */
+    color: #f5f6fa;
+    margin-bottom: 5px; /* Add some space below the name on mobile */
+}
+
+@media (min-width: 768px) {
+    .goal-name {
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+}
+
+.goal-amounts {
+    display: flex;
+    flex-direction: column; /* Stack amounts on mobile */
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .goal-amounts {
+        flex-direction: row; /* Display amounts in a row on larger screens */
+        align-items: center;
+    }
+
+    .goal-amounts span {
+        margin-left: 15px; /* Add spacing between amounts on larger screens */
+    }
+}
+
+.goal-target {
+    font-weight: bold;
+    color: #f39c12; /* Yellow/Orange for target (similar to Budget) */
+}
+
+.goal-current {
+    font-weight: bold;
+    color: #2ecc71; /* Teal/Green for current (consistent accent) */
+}
+
+.goal-deadline {
+    font-style: italic;
+    color: #95a5a6; /* Light gray for deadline */
+}
+
+.actions button {
+    background-color: #e74c3c; /* Red for remove */
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+}
+
+.actions button:hover {
+    background-color: #c0392b;
+}
+
+.actions .edit-button {
+    background-color: #3498db; /* Blue for edit */
+}
+
+.actions .edit-button:hover {
+    background-color: #2980b9;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements on mobile */
+    gap: 10px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .edit-form {
+        flex-direction: row; /* Revert to row for larger screens */
+        align-items: center;
+    }
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="number"],
+.edit-form input[type="date"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #485460;
+    border-radius: 0;
+    background-color: #34495e;
+    color: #f5f6fa;
+    margin-bottom: 5px; /* Add some space below inputs on mobile */
+}
+
+@media (min-width: 768px) {
+    .edit-form input[type="text"],
+    .edit-form input[type="number"],
+    .edit-form input[type="date"] {
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+}
+
+.edit-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-buttons button {
+    background-color: #3498db; /* Blue for save */
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-buttons .cancel-button {
+    background-color: #f39c12; /* Yellow/Orange for cancel */
+}
+
+.edit-buttons button:hover {
+    background-color: #2980b9;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements on mobile */
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .add-form {
+        flex-direction: row; /* Revert to row for larger screens */
+        align-items: center;
+    }
+}
+
+.add-form .input-field {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #485460;
+    border-radius: 0;
+    background-color: #34495e;
+    color: #f5f6fa;
+    margin-bottom: 5px; /* Add some space below inputs on mobile */
+}
+
+@media (min-width: 768px) {
+    .add-form .input-field {
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+}
+
+.add-form .add-button {
+    padding: 10px 15px;
+    background-color: #2ecc71; /* Teal/Green for add */
+    color: white;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-form .add-button:hover {
+    background-color: #27ae60;
+}
+
+.total-savings-section {
+    background-color: #2c3e50; /* Darker section background */
+    padding: 20px;
+    margin-top: 30px; /* Add some space above */
+    border-radius: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3); /* Shadow on top */
+    width: 100%;
+    max-width: none;
+    text-align: center; /* Center the content */
+}
+
+.total-savings-section h3 {
+    color: #f5f6fa;
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 5px;
+    border-bottom: none; /* Remove the border */
+    padding-bottom: 0;
+    font-size: 1.2em; /* Slightly smaller heading */
+}
+
+.total-savings-section .total-amount {
+    font-size: 1.8em; /* Make the amount larger */
+    font-weight: bold;
+    color: #2ecc71; /* Teal/Green for total savings */
+    margin-top: 5px;
+}

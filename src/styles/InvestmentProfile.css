@@ -1,0 +1,190 @@
+/* InvestmentProfile.css */
+
+.investment-profile-container {
+    font-family: sans-serif;
+    background-color: #1e272e; /* Dark background from the theme */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Full width */
+    padding: 20px;
+    color: #f5f6fa; /* Light text color */
+}
+
+h2 {
+    color: #f5f6fa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #f5f6fa;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #485460; /* Darker border */
+    padding-bottom: 5px;
+}
+
+.investments-section,
+.add-investment-section,
+.total-investment-section {
+    background-color: #2c3e50; /* Darker section background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0; /* Full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    width: 100%;
+    max-width: none;
+}
+
+.investments-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.investment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #485460;
+}
+
+.investment-item:last-child {
+    border-bottom: none;
+}
+
+.investment-details {
+    flex-grow: 1;
+}
+
+.investment-name {
+    font-weight: bold;
+    color: #3498db; /* Blue for investment name */
+}
+
+.actions button {
+    background-color: #e74c3c; /* Red for remove */
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+}
+
+.actions button:hover {
+    background-color: #c0392b;
+}
+
+.actions .edit-button {
+    background-color: #f39c12; /* Yellow/Orange for edit */
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+}
+
+.actions .edit-button:hover {
+    background-color: #e67e22;
+}
+
+.edit-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="number"] {
+    padding: 8px;
+    border: 1px solid #485460;
+    border-radius: 0;
+    background-color: #34495e;
+    color: #f5f6fa;
+}
+
+.edit-form .edit-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.edit-form .edit-buttons button {
+    background-color: #3498db; /* Blue for save */
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-form .edit-buttons .cancel-button {
+    background-color: #f39c12; /* Yellow/Orange for cancel */
+}
+
+.edit-form .edit-buttons button:hover {
+    background-color: #2980b9;
+}
+
+.add-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.add-form .input-field {
+    padding: 10px;
+    border: 1px solid #485460;
+    border-radius: 0;
+    background-color: #34495e;
+    color: #f5f6fa;
+}
+
+.add-form .add-button {
+    padding: 10px 15px;
+    background-color: #2ecc71; /* Teal/Green for add */
+    color: white;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-form .add-button:hover {
+    background-color: #27ae60;
+}
+
+.total-investment-section {
+    background-color: #2c3e50; /* Darker section background */
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: none;
+    text-align: center;
+}
+
+.total-investment-section h3 {
+    color: #f5f6fa;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 1.2em;
+}
+
+.total-investment-section .total-amount {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2ecc71; /* Teal/Green for total investment value */
+    margin-top: 5px;
+}
